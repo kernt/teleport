@@ -127,7 +127,8 @@ func NewImplicitRole() Role {
 		},
 		Spec: RoleSpecV3{
 			Options: RoleOptions{
-				MaxSessionTTL: MaxDuration(),
+				MaxSessionTTL:  MaxDuration(),
+				PortForwarding: NewBoolOption(false),
 			},
 			Allow: RoleConditions{
 				Namespaces: []string{defaults.Namespace},
